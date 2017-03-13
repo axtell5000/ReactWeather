@@ -20,7 +20,10 @@ module.exports = {
 
       } else {
 
-        return res.data.main.temp;
+        return {
+           location: `${res.data.name}, ${res.data.sys.country}`,
+           temp: Math.floor(res.data.main.temp)
+        }
 
       }
 
