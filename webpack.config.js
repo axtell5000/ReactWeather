@@ -2,8 +2,24 @@
  * Created by User on 2017/01/24.
  */
 
+var webpack = require('webpack');
+
 module.exports = {
-    entry : './app/app.jsx',
+    entry : [
+      //to allow jquery and foundtion to be recognized by webpack, we must add 'script!' in front. The nmp module script-loader allows us to do this.
+      'script!jquery/dist/jquery.min.js',
+      'script!foundation-sites/dist/js/foundation.min.js',
+      './app/app.jsx'
+    ],
+    externals: {
+      jquery: 'jQuery'
+    },
+    plugins: [
+      new webpack.ProvidePlugin({
+        '$': 'jquery',
+        'jQuery' : 'jquery'
+      })
+    ],
     output: {
         path: __dirname,
         filename: './public/bundle.js'

@@ -13,6 +13,11 @@ var Weather = require('Weather');
 var About = require('About');
 var Examples = require('Examples');
 
+//Load foundation.need to use those style and css loader modules,to help app to use the file properly
+require('style!css!foundation-sites/dist/css/foundation.min.css');
+//To start foundation
+$(document).foundation();
+
 
 //<Router> is available because of our require above
 ReactDOM.render(
