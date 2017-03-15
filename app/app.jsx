@@ -19,7 +19,7 @@ require('style!css!foundation-sites/dist/css/foundation.min.css');
 $(document).foundation();
 
 //App css
-require('style!css!applicationStyles');
+require('style!css!sass!applicationStyles');
 
 
 //<Router> is available because of our require above
