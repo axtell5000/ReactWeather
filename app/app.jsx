@@ -18,6 +18,9 @@ require('style!css!foundation-sites/dist/css/foundation.min.css');
 //To start foundation
 $(document).foundation();
 
+//App css
+require('style!css!applicationStyles');
+
 
 //<Router> is available because of our require above
 ReactDOM.render(
